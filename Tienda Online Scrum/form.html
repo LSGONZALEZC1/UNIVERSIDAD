@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Formulario</title>
+
+    <style>
+      #archivo{
+         display: none;
+      }
+      img{
+         width:50%;
+      }
+         </style>
+         <link rel="stylesheet" href="css/style2.css">
+
+</head>
+<body>
+    <div class="nombre">
+        <label>Digite el nombre del producto: </label>
+        <input type="text" id="nombre" placeholder="name"/>
+        <button onclick="confnombre()">
+          Confirmar nombre del producto
+        </button>
+        <p id="confnombre"></p>
+    </div>
+
+    <div class="codigo">
+        <label>Digite el codigo del producto: </label>
+        <input type="number" id="nomest" placeholder="codige"/>
+        <button onclick="condcodige()">
+          Confirmar codigo del producto
+        </button>
+        <p id="condcodige"></p>
+    </div>
+
+    <div class="categoria">
+        
+        
+      <label for="categorias">Seleccione la categoria del producto: </label>
+    
+      <select name="categorias" id="categorias">
+          <option selected="selected">seleccione la categoria</option>
+          <option type="text"value="Laptops" >Laptops</option>
+          <option type="text" value="Smartphones"> Smartphones</option>
+          <option type="text" value="Cameras" > Cameras</option>
+          <option type="text" value="Accessories"> Accessories</option>
+          <option type="text" value="categoria" > Sin categoria</option>
+      </select>
+      
+
+      <button id="submit"> Seleccionar la categoria </button>
+      <p id="confcategoria"></p>
+
+</div>
+
+    <div class="cantidad">
+    <label>Digite la cantidad de artículos disponibles: </label>
+    <input type="number" id="ingresoNumeroArticulos" />
+    <button onclick="mostrarNumeroArticulos()">
+      Confimar número de artículos
+    </button>
+    <p id="mostrarNumeroArticulos"></p>
+    </div>
+    
+    <div class="precio">
+    <label>Digite el precio del producto: </label>
+    <input type="number" id="pres" placeholder="Precio"  />
+    <button onclick="confprecio()">
+      Confimar precio del producto
+    </button>
+    <p id="confprecio"></p>
+    </div>
+
+<div class="descri">
+    <label>Digite la descripcion del producto: </label>
+    <input type="text" id="descripcion" placeholder="description"  />
+    <button onclick="confdescripcion()">
+      Confimar descipcion del producto
+    </button>
+    <p id="confdescripcion"></p>
+</div>
+
+<div class="imagen">
+
+  <input type="file" name="archivo" id="archivo" multiple>
+  <br>
+  <label>Ingrese imagen del producto: </label>
+  <button id="boton" type="button">Selecciona un archivo</button>
+  <script>
+   document.addEventListener("DOMContentLoaded",() => {
+  const archivo = document.getElementById("archivo");
+  const boton = document.getElementById("boton");
+  boton.addEventListener("click", () => {
+     archivo.click();
+  });
+  archivo.addEventListener("change", ()=> {
+     for(let i = 0; i < archivo.files.length; i++){
+        const element = URL.createObjectURL(archivo.files[i]);
+        const imagen = document.createElement("img");
+        imagen.src = element;
+        document.body.appendChild(imagen);
+     }
+  });
+});
+   </script>
+</div>
+
+<div class="volver" >
+  <button class="regresar" type="button"><a href="index.html">FINALIZAR</a></button>
+</div>
+
+    <script src="js/form.js">    </script>
+    <link rel="stylesheet" href="css/stylefrom.css"><!--esto es para poder conectar con el CSS-->
+
+    
+
+
+
+    
+</body>
+
+</html>
