@@ -1,0 +1,3 @@
+Perro [raza=cane corzo, color=cafe, nombre=fifi, edad=8]
+Perro [raza=bulldog, color=cafe con blanco, nombre=lili, edad=4]
+Perro [raza=labrador, color=blanco, nombre=toby, edad=6]

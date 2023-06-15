@@ -1,0 +1,3 @@
+Perro [raza=cane Corso, color=Negro, nombre=fifi, edad=8] 
+Perro [raza=criollo, color=miel, nombre=Max, edad=7] 
+Perro [raza=Tacita de te, color=blanco, nombre=Mafalda, edad=16] 
